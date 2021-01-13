@@ -1,0 +1,153 @@
+/* header  */
+header nav ul {
+    border-bottom: 1px solid #ffffff57;
+}
+header nav ul li a {
+    text-transform: uppercase;
+    padding: 20px 25px !important; 
+}
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, orange,yellow);
+    /* background: linear-gradient(to right, orange,yellow) : trộn màu từ trái sang phải  */
+    position: absolute;
+    bottom: 0;
+}
+header nav ul li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, orange,yellow);
+    /* background: linear-gradient(to right, orange,yellow) : trộn màu từ trái sang phải  */
+    position: absolute;
+    bottom: 0;
+    transition: 0.5s;
+}
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+#demo 
+.carousel-inner .carousel-item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    padding-top: 250px;
+}
+
+.item1 {
+    background-image: url(../img/hero-1.jpg);
+    
+} 
+#demo .item2 {
+    background-image: url(../img/hero-2.jpg);
+    
+} 
+#demo .item3 {
+    background-image: url(../img/hero-3.jpg);
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px; */
+} 
+
+.carousel-indicators li {
+    /* nút chuyển hình ảnh */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent
+}
+.carousel-indicators li.active {
+   background: white; 
+}
+
+header {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background cho cả thanh menu */
+}
+
+.btn-trailer  {
+color: white !important;
+background: linear-gradient(to right,#fbbd61,#ec7532);
+padding: 15px 30px;
+border-radius:35px;
+overflow: hidden;
+position: relative;
+}
+
+.btn-trailer::after {
+    content: "";
+      /* bắt buộc phải có content đầu tiên  */
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #ec7532;
+    position: absolute;
+    top: 0;
+    left: -15%;
+    transform: skew(30deg);
+    transition: 0.5s;
+}
+.btn-trailer i , .btn-trailer span {
+position: relative;
+z-index: 1;
+/* 2 thuộc tính đi kèm nhau  */
+
+}
+.btn-trailer:hover::after {
+    width: 140%;
+    color: white !important;
+    /* !important : ưu tiên đè lên các thuộc tính của bootstrap  */
+
+}
+
+
+/* NEW IN  */
+.title__heading {
+text-transform: uppercase;
+color: #ec7532;
+border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+padding-bottom: 15px;
+position: relative;
+font-size: 3rem;
+}
+
+@media screen and (max-width: 992px) {
+    .title__heading {
+        font-size: 2rem;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .title__heading {
+        font-size: 1rem;
+    }
+  }
+
+.title__heading::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 15%;
+    background: linear-gradient(to right,#fbbd61,#ec7532);
+    position: absolute;
+    bottom: 0;
+}
+
+.slick-prev::before,
+.slick-next::before {
+color: #ec7532;
+}
